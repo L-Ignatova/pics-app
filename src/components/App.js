@@ -5,7 +5,6 @@ import SearchBar from './SearchBar';
 
 const ROOT_URL = `https://api.unsplash.com`;
 const SEARCH_PHOTOS_URL = `/search/photos`;
-const access = `DCmeL44GUCSGoplySK6jRphUH0mQEZXD2ITbgBd_W7c`;
 
 class App extends React.Component {
   state = { images: [] };
@@ -14,7 +13,7 @@ class App extends React.Component {
     axios.get(`${ROOT_URL}${SEARCH_PHOTOS_URL}`, {
       params: { query: term },
       headers: {
-        Authorization: `Client-ID ${access}`
+        Authorization: `Client-ID DCmeL44GUCSGoplySK6jRphUH0mQEZXD2ITbgBd_W7c`
       },
     }).then(response => this.setState({ images: response.data.results }));
     
